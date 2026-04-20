@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Genre</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (book of books; track book.id) {
+      <tr>
+        <td>{{ book.name }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.genre }}</td>
+        <td>{{ book.price }}</td>
+        <td><i class="bi bi-pencil" (click)="editModal(book)"></i></td>
+        <td><i class="bi bi-trash" (click)="deleteBook(book)"></i></td>
+      </tr>
+    }
+  </tbody>
+</table>

@@ -1,12 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { BookComponent } from './components/book/book.component';
+import { BooksComponent } from './components/books/books.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [BookComponent, BooksComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('FirebaseCRUDApp');
-}
+export class App {}
